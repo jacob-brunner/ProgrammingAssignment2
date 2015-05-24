@@ -21,8 +21,8 @@ cacheSolve <- function(mat, ...) {
     if(!is.null(inverse)) {
         return(inverse)
     }
-    data <- mat$get()
-    invserse <- solve(data, ...)
+    d <- mat$get()
+    inverse <- solve(d, ...)
     mat$setinv(inverse)
     return(inverse)
 }
